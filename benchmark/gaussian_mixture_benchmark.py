@@ -182,7 +182,7 @@ class PlanSampler:
         return input_samples, output_samples
         
         
-def get_guassian_mixture_benchmark_sampler(input_or_target: str, dim: int, eps: float,
+def get_gaussian_mixture_benchmark_sampler(input_or_target: str, dim: int, eps: float,
                                            batch_size: int, device: str ="cpu", download: bool =False):
     assert input_or_target in ["input", "target"]
     assert dim in [2, 4, 8, 16, 32, 64, 128]
@@ -211,7 +211,7 @@ def get_guassian_mixture_benchmark_sampler(input_or_target: str, dim: int, eps: 
         return OutputSampler(gm, conditional_plan)
     
     
-def get_guassian_mixture_benchmark_ground_truth_sampler(dim: int, eps: float, batch_size: int,
+def get_gaussian_mixture_benchmark_ground_truth_sampler(dim: int, eps: float, batch_size: int,
                                                         device: str ="cpu", download: bool =False):
     assert dim in [2, 4, 8, 16, 32, 64, 128]
     assert eps in [0.01, 0.1, 1, 10]
